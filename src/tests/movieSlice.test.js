@@ -1,4 +1,4 @@
-import moviesSlice, { fetchMovies } from '../data/moviesSlice'
+import moviesSlice, { fetchMovies, filterMovies } from '../data/moviesSlice'
 import { moviesMock } from './movies.mocks'
 
 describe('MovieSlice test', () => {
@@ -31,6 +31,15 @@ describe('MovieSlice test', () => {
             movies: [], fetchStatus: '',
         }, action);
         expect(action).toEqual({type: fetchMovies.rejected})
+     })
+
+    it('should set error when filterMovies action is rejected', () => {
+        const action = {type: filterMovies.rejected};
+        const initialState = moviesSlice.reducer(
+        { 
+            movies: [], searchedMovies: [], fetchStatus: '',
+        }, action);
+        expect(action).toEqual({ type: filterMovies.rejected });
      })
 
 })

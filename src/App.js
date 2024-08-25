@@ -114,7 +114,7 @@ const App = () => {
         setSearchParams={setSearchParams}
       />
 
-      <div className="container">
+      <div className="container" data-testid="main-container">
         {videoKey && (
           <YouTubePlayer
             selectedMovieTitle={selectedMovieTitle}

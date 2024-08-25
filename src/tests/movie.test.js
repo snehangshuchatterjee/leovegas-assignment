@@ -4,7 +4,7 @@ import { renderWithProviders } from "./utils";
 import App from "../App";
 import React from "react";
 
-describe.only("movies test", () => {
+describe("movies test", () => {
   it("movies starred and saved to watch later", async () => {
     renderWithProviders(<App />);
 
@@ -33,7 +33,9 @@ describe.only("movies test", () => {
     });
     await fireEvent.click(watchLaterLink);
     await waitFor(() => {
-      expect(screen.getByTestId("remove-watch-later")).toBeInTheDocument();
+      expect(
+        screen.getAllByTestId("remove-watch-later")[0]
+      ).toBeInTheDocument();
     });
 
     await userEvent.click(screen.getAllByTestId("remove-watch-later")[0]);
