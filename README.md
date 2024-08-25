@@ -41,3 +41,5 @@ This is because Strictmode renders the component twice to be extra sure of not d
 - I have created a hook for checking if the user as scrolled to the bottom of the screen. If yes, I fetch the data again. I could have used 3rd party libraries as well for implementing Infinite scroll, but wanted to create a basic working version myself to demonstrate my knowledge
 
 - I have tested most of the application, leaving out some part which I felt was not worth the effort involved in writing the test cases
+
+- I have kept the UI same as it was earlier (unless where explicitly asked to change it, like modal for trailer). However, there can be a few changes in the UI which would make the application more user friendly
